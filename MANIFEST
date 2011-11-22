@@ -4,7 +4,7 @@ MANIFEST
 META.yml
 Makefile.PL
 README
-lib/WWW/Shorten/Github.pm
+lib/WWW/Shorten/GitHub.pm
 t/001_basics.t
 t/002_shorten.t
 t/003_lengthen.t

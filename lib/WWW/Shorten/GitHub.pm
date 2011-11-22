@@ -8,7 +8,7 @@ WWW::Shorten::GitHub - Shorten GitHub URLs using GitHub's URL shortener - git.io
 
 =head1 SYNOPSIS
 
-This module provide a perl interface to GitHub's URL shortening service, git.io.
+This module provides a perl interface to GitHub's URL shortening service, git.io.
 
 It allows you to shorten any GitHub URL, and also retrieve the original URL from 
 a pre-shortened URL
@@ -29,7 +29,7 @@ use warnings;
 use base qw(WWW::Shorten::generic Exporter);
 
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = '0.1.0';
+our $VERSION = '0.1.1';
 
 use Carp;
 use URI;
