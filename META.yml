@@ -26,4 +26,4 @@ requires:
 resources:
   bugtracker: https://github.com/LoonyPandora/WWW-Shorten-GitHub/issues
   repository: git://github.com/LoonyPandora/WWW-Shorten-GitHub.git
-version: 0.1.1
+version: 0.1.2

@@ -29,7 +29,7 @@ use warnings;
 use base qw(WWW::Shorten::generic Exporter);
 
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = '0.1.1';
+our $VERSION = '0.1.2';
 
 use Carp;
 use URI;
@@ -38,7 +38,7 @@ sub makeashorterlink {
     my $url = shift or croak 'No URL passed to makeashorterlink';
 
     my $host = URI->new($url)->host();    
-    if ($host !~ m/github\.com$/) {
+    if ($host !~ m/^(gist\.)?github\.com$/) {
         croak "Git.io only shortens URLs under the github.com domain";
     }
 
