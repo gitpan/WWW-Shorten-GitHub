@@ -8,7 +8,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300003, CPAN::Meta::Converter version 2.112621'
+generated_by: 'Dist::Zilla version 4.300021, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -25,5 +25,6 @@ requires:
   warnings: 0
 resources:
   bugtracker: https://github.com/LoonyPandora/WWW-Shorten-GitHub/issues
-  repository: git://github.com/LoonyPandora/WWW-Shorten-GitHub.git
-version: 0.1.2
+  homepage: https://github.com/LoonyPandora/WWW-Shorten-GitHub
+  repository: https://github.com/LoonyPandora/WWW-Shorten-GitHub.git
+version: 0.1.3

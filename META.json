@@ -1,0 +1,55 @@
+{
+   "abstract" : "Shorten GitHub URLs using GitHub's URL shortener - git.io",
+   "author" : [
+      "James Aitken <jaitken@cpan.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.300021, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "WWW-Shorten-GitHub",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.30"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Carp" : "0",
+            "Exporter" : "0",
+            "URI" : "0",
+            "WWW::Shorten::generic" : "0",
+            "base" : "0",
+            "perl" : "5.008",
+            "strict" : "0",
+            "warnings" : "0"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0",
+            "WWW::Shorten" : "0"
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/LoonyPandora/WWW-Shorten-GitHub/issues"
+      },
+      "homepage" : "https://github.com/LoonyPandora/WWW-Shorten-GitHub",
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/LoonyPandora/WWW-Shorten-GitHub.git",
+         "web" : "https://github.com/LoonyPandora/WWW-Shorten-GitHub"
+      }
+   },
+   "version" : "0.1.3"
+}
+

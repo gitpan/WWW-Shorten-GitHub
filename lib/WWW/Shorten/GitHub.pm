@@ -29,7 +29,7 @@ use warnings;
 use base qw(WWW::Shorten::generic Exporter);
 
 our @EXPORT = qw(makeashorterlink makealongerlink);
-our $VERSION = '0.1.2';
+our $VERSION = '0.1.3';
 
 use Carp;
 use URI;
@@ -43,14 +43,14 @@ sub makeashorterlink {
     }
 
     my $ua = __PACKAGE__->ua();
-    my $response = $ua->post('http://git.io', [
+    my $response = $ua->post('http://git.io/create', [
         url    => $url,
         source => 'PerlAPI-' . (defined __PACKAGE__->VERSION ? __PACKAGE__->VERSION : 'dev'),
         format => 'simple',
     ]);
 
-    if ($response->header('Status') eq '201 Created') {
-        return $response->header('Location');
+    if ($response->header('Status') eq '200 OK') {
+        return 'http://git.io/' . $response->decoded_content;
     }
 
     return;
