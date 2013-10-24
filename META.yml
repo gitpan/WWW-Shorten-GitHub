@@ -3,28 +3,26 @@ abstract: "Shorten GitHub URLs using GitHub's URL shortener - git.io"
 author:
   - 'James Aitken <jaitken@cpan.org>'
 build_requires:
-  Test::More: 0
-  WWW::Shorten: 0
+  Test::More: 0.88
+  WWW::Shorten: 1.98
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300021, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 4.300039, CPAN::Meta::Converter version 2.132830'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: WWW-Shorten-GitHub
 requires:
-  Carp: 0
-  Exporter: 0
-  URI: 0
-  WWW::Shorten::generic: 0
-  base: 0
-  perl: 5.008
-  strict: 0
-  warnings: 0
+  Carp: 1.11
+  Exporter: 5.65
+  URI: 1.38
+  WWW::Shorten::generic: 1.92
+  base: 2.14
+  perl: v5.10.0
 resources:
   bugtracker: https://github.com/LoonyPandora/WWW-Shorten-GitHub/issues
   homepage: https://github.com/LoonyPandora/WWW-Shorten-GitHub
   repository: https://github.com/LoonyPandora/WWW-Shorten-GitHub.git
-version: 0.1.3
+version: 0.1.4

@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use 5.008;
+use 5.010000;
 
 use ExtUtils::MakeMaker 6.30;
 
@@ -11,10 +11,7 @@ use ExtUtils::MakeMaker 6.30;
 my %WriteMakefileArgs = (
   "ABSTRACT" => "Shorten GitHub URLs using GitHub's URL shortener - git.io",
   "AUTHOR" => "James Aitken <jaitken\@cpan.org>",
-  "BUILD_REQUIRES" => {
-    "Test::More" => 0,
-    "WWW::Shorten" => 0
-  },
+  "BUILD_REQUIRES" => {},
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
   },
@@ -23,20 +20,35 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "WWW::Shorten::GitHub",
   "PREREQ_PM" => {
-    "Carp" => 0,
-    "Exporter" => 0,
-    "URI" => 0,
-    "WWW::Shorten::generic" => 0,
-    "base" => 0,
-    "strict" => 0,
-    "warnings" => 0
+    "Carp" => "1.11",
+    "Exporter" => "5.65",
+    "URI" => "1.38",
+    "WWW::Shorten::generic" => "1.92",
+    "base" => "2.14"
   },
-  "VERSION" => "0.1.3",
+  "TEST_REQUIRES" => {
+    "Test::More" => "0.88",
+    "WWW::Shorten" => "1.98"
+  },
+  "VERSION" => "0.1.4",
   "test" => {
     "TESTS" => "t/*.t"
   }
 );
 
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
+  my $tr = delete $WriteMakefileArgs{TEST_REQUIRES};
+  my $br = $WriteMakefileArgs{BUILD_REQUIRES};
+  for my $mod ( keys %$tr ) {
+    if ( exists $br->{$mod} ) {
+      $br->{$mod} = $tr->{$mod} if $tr->{$mod} > $br->{$mod};
+    }
+    else {
+      $br->{$mod} = $tr->{$mod};
+    }
+  }
+}
 
 unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
   my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
